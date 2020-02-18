@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+    - { role: common }
+    - { role: master, tags: ["master"] }
+    - { role: worker, tags: ["worker"] }
