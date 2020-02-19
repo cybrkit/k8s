@@ -20,6 +20,6 @@
 
 - name: "Enable Docker"
   service:
-    name: dcoker
+    name: docker
     state: started
     enabled: yes
