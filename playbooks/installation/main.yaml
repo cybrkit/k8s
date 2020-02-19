@@ -1,7 +1,12 @@
 ---
-- hosts: localhost
+- hosts: k8s_masters
   become: yes
   roles:
     - { role: common }
-    - { role: master, tags: ["master"] }
-    - { role: worker, tags: ["worker"] }
+    - { role: master}
+
+- hosts: k8s_workers
+  become: yes
+  roles:
+    - { role: common }
+    - { role: worker }

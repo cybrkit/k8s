@@ -17,3 +17,9 @@
       - kubectl
       - kubelet
     update_cache: yes
+
+- name: "Enable Docker"
+  service:
+    name: dcoker
+    state: started
+    enabled: yes

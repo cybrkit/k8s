@@ -20,4 +20,4 @@ pip3 install ansible==2.9.5
 /usr/local/bin/ansible-playbook --version
 
 git clone https://github.com/cybrkit/k8s.git k8s_labs
-/usr/local/bin/ansible-playbook ./k8s_labs/playbooks/installation/main.yaml --tags "master"
+/usr/local/bin/ansible-playbook ./k8s_labs/playbooks/installation/main.yaml -i inventory.ini

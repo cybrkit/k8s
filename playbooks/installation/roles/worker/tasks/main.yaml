@@ -1,6 +1,7 @@
 ---
 - name: "Generate Join Command"
-  delegate: localhost
+  delegate_to: k8s_masters
+  run_once: true
   command: "kubeadm token create --print-join-command --ttl=5m"
   register: k8s_join
 
