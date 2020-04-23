@@ -20,4 +20,5 @@ pip3 install ansible==2.9.5
 
 export ANSIBLE_HOST_KEY_CHECKING=False
 export ANSIBLE_REMOTE_TMP=/tmp/k8s_lab
-/usr/local/bin/ansible-playbook ../playbooks/installation/main.yaml -i inventory.ini
+export PATH=$PATH:$HOME/.local/bin:/usr/local/bin
+ansible-playbook ../playbooks/installation/main.yaml -i inventory.ini
